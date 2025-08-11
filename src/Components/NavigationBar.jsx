@@ -2,8 +2,9 @@ import ThemeToggle from './ThemeToggle';
 
 const NavigationBar = () => {
   return (
-      <ThemeToggle />
-    
+    <nav class="bg-white shadow">
+      
+    </nav>
   );
 }
 
