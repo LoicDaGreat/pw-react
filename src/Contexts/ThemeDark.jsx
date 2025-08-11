@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 
 export const DarkContext = createContext();
 
-const ThemeDark = ({Prop}) => {
+const ThemeDark = ({Props}) => {
 
     const [isDark, setIsDark] = useState(false);
 
@@ -13,7 +13,7 @@ const ThemeDark = ({Prop}) => {
         if (systemTheme || storedTheme === 'dark') {
             setIsDark(true); 
         }
-        // console.log('DarkMode: ', systemTheme);
+        console.log('DarkMode: ', systemTheme);
     }, []);
 
     useEffect(() => {
@@ -43,7 +43,7 @@ const ThemeDark = ({Prop}) => {
         theme: isDark ? 'dark' : 'light' 
       }}
     >
-      {Prop}
+      {Props}
     </DarkContext.Provider>
   );
 };
