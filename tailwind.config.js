@@ -7,8 +7,7 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          primary: "#2259FE",
-          // secondary: "",
+          primary: "#2259FE"
         },
         dark: {
           50: '#f8f9fa',
@@ -26,5 +25,6 @@ module.exports = {
     },
   },
   plugins: [],
+  darkMode: "class"
 }
 
