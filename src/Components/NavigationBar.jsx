@@ -8,6 +8,16 @@ import { FileDown, Menu, X } from 'lucide-react';
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleDownload = () => {
+    const filePath = '/files/LoicCV.pdf';
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = 'LoicCV.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
       <div className="w-full h-30 absolute bg-gradient-to-r from-blue-400 to-emerald-400 dark:bg-black">
         <nav className="flex justify-between items-center 
@@ -28,7 +38,9 @@ const NavigationBar = () => {
           </ul> 
 
           <div className="relative hidden md:flex items-center jutify-center gap-3">
-            <button className="bg-opacity-50 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg flex items-center gap-3 transition-colors duration-200 shadow-lg hover:shadow-xl"> 
+            <button className="bg-opacity-50 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg flex items-center gap-3 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              onClick={handleDownload}
+            > 
               <FileDown />
               <span>Download CV</span>
             </button>         
