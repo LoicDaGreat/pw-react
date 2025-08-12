@@ -1,8 +1,12 @@
 import React from 'react'
+import NavigationBar from '../Components/NavigationBar'
 
 const Skills = () => {
   return (
-    <div>Skills</div>
+    <div>
+      <NavigationBar/>
+      Skills
+    </div>
   )
 }
 

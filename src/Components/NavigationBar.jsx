@@ -19,9 +19,9 @@ const NavigationBar = () => {
   }
 
   return (
-      <div className="w-full h-30 absolute bg-gradient-to-r from-blue-400 to-emerald-400 dark:bg-black">
+      <div className="w-full h-25 absolute">
         <nav className="flex justify-between items-center 
-        text-black
+        text-white
         py-6 px-8
         md:px-32 bg-white drop-shadow-md bg-opacity-0">
           
