@@ -1,5 +1,3 @@
-import React from 'react';
-import NavigationBar from '../Components/NavigationBar';
 import ContentArea from '../Components/ContentArea';
 import main from '../assets/background/main.jpg';
 

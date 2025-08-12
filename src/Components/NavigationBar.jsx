@@ -30,15 +30,15 @@ const NavigationBar = () => {
           </a> 
 
           <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110  rounded-md transition-all cursor-pointer"><span className="text-blue-600">01</span><br/><Link to="/">Home</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">02</span><br/><Link to="/about">About</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">Skills</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">Projects</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">Contact</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110  rounded-md transition-all cursor-pointer"><span className="text-blue-600">01</span><br/><Link to="/">HOME</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">02</span><br/><Link to="/about">ABOUT</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">SKILLS</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">PROJECTS</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">CONTACT</Link></li>
           </ul> 
 
           <div className="relative hidden md:flex items-center jutify-center gap-3">
-            <button className="bg-opacity-50 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg flex items-center gap-3 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            <button className="outline outline-gray-500 outline-1 bg-opacity-50 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-sm flex items-center gap-3 transition-colors duration-200 shadow-lg hover:shadow-xl"
               onClick={handleDownload}
             > 
               <FileDown />
