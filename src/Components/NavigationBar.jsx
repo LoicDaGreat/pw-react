@@ -9,7 +9,7 @@ const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-      <div className="w-full h-full absolute bg-gradient-to-r from-blue-400 to-emerald-400 dark:bg-black">
+      <div className="w-full h-30 absolute bg-gradient-to-r from-blue-400 to-emerald-400 dark:bg-black">
         <nav className="flex justify-between items-center 
         text-black
         py-6 px-8
@@ -20,11 +20,11 @@ const NavigationBar = () => {
           </a> 
 
           <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-            <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer"><span className="text-blue-600">01</span><br/><Link to="/">Home</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer"><span className="text-blue-600">02</span><br/><Link to="/about">About</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">Skills</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">Projects</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">Contact</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110  rounded-md transition-all cursor-pointer"><span className="text-blue-600">01</span><br/><Link to="/">Home</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">02</span><br/><Link to="/about">About</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">Skills</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">Projects</Link></li>
+            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">Contact</Link></li>
           </ul> 
 
           <div className="relative hidden md:flex items-center jutify-center gap-3">
