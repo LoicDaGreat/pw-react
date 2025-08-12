@@ -1,15 +1,14 @@
 import ContentArea from '../Components/ContentArea';
 import main from '../assets/background/main.jpg';
+import ParticlesComponent from '../Components/ParticlesComponent';
 
 const Index = () => {
   return (
-    <div className="bg-cover bg-center h-screen w-full"
-    >
+    <div>
+      <ParticlesComponent />
       <ContentArea backgroundImg={main}>
-
-      </ContentArea>
-      
-
+        
+      </ContentArea>      
     </div>
   );
 }
