@@ -1,13 +1,29 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 import Index from './Pages/Index';
+import About from './Pages/About';
+import Skills from './Pages/Skills';
+import Contact from './Pages/Contact';
+import Projects from './Pages/Projects';
+import ProjectDetails from './Pages/ProjectDetails';
 import ThemeDark from './Contexts/ThemeDark';
 
 const App = () => {
   return (
-    // <ThemeDark>
-      <Index />
-    /* </ThemeDark> */
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/skills" element={<Skills />}/>
+        <Route path="/contact" element={<Contact />}/>
+        <Route path="/projects" element={<Projects />}/>
+        {/* <Route path="/" element={<Index />}/> */}
+          {/* <ThemeDark> */}
+            {/* <Index /> */}
+          {/* </ThemeDark> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
