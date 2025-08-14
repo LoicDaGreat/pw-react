@@ -2,28 +2,39 @@ import ContentArea from '../Components/ContentArea';
 import main from '../assets/background/main.jpg';
 import ParticlesComponent from '../Components/ParticlesComponent';
 import PhoneWidget from '../Components/PhoneWidget';
+import { Link } from 'react-router-dom';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { CircleArrowRight, FolderGit2 } from 'lucide-react';
 
 const Index = () => {
 
   return (
     <div>
-      <ParticlesComponent />
       <div className="absolute inset-0 bg-black opacity-50"></div>
+      <ParticlesComponent />
       <ContentArea backgroundImg={main}>
-          <div class="flex text-center top-1/2 translate-y-2/3 justify-center p-8">
-            <h1 class="text-white text-5xl font-semibold leading-tight">
-               <p class="text-blue-400 text-lg md:text-xl mb-6 font-medium">
-                Hi, welcome to my personal website.
+        <div className="content-overlay flex flex-col items-center justify-center min-h-screen px-8 mt-2">
+          <div className="text-center max-w-5xl relative z-10">
+              <p className="text-blue-400 text-lg md:text-xl mb-8 font-medium">
+                  Hi, welcome to my personal website.
               </p>
-                My name is Nkeng Wilfried, a Swellendam based Developer
-            </h1>
+              <h1 className="text-white text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-12">
+                  My name is Nkeng Wilfried, a Swellendam based Developer
+              </h1>
+              <div className="flex justify-center gap-3">
+                <Link to="/contact">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-4 rounded transition-all duration-300 hover:scale-110 flex items-center gap-3 animate-bounce">
+                      Hire Me <CircleArrowRight />
+                  </button>
+                </Link>
+                <Link to="/projects">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-4 rounded transition-all duration-300 hover:scale-110 flex items-center gap-3 animate-bounce">
+                      Portfolio <FolderGit2 />
+                  </button>
+                </Link>
+              </div>
           </div>
-          <div className="md:flex items-center jutify-center gap-3">
-              <button className="bg-blue-700 text-white font-medium px-6 py-3 rounded-sm items-center gap-3 shadow-lg hover:shadow-xl"> 
-                <span>Hire Me</span>
-              </button>         
-          </div>
+        </div>
         <PhoneWidget />
       </ContentArea>      
     </div>

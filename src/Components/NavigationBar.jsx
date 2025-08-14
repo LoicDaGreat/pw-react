@@ -19,7 +19,7 @@ const NavigationBar = () => {
   }
 
   return (
-      <div className="w-full h-25 absolute">
+      <div className="w-full h-25 absolute z-20">
         <nav className="flex justify-between items-center 
         text-white
         py-6 px-8
