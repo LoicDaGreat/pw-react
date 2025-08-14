@@ -14,12 +14,12 @@ const Index = () => {
       <ParticlesComponent />
       <ContentArea backgroundImg={main}>
         <div className="content-overlay flex flex-col items-center justify-center min-h-screen px-8 mt-2">
-          <div className="text-center max-w-5xl relative z-10">
-              <p className="text-blue-400 text-lg md:text-xl mb-8 font-medium">
+          <div className="text-center max-w-3xl relative z-10">
+              <p className="text-blue-400 text-lg mb-8 font-medium">
                   Hi, welcome to my personal website.
               </p>
-              <h1 className="text-white text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-12">
-                  My name is Nkeng Wilfried, a Swellendam based Developer
+              <h1 className="text-white text-2xl sm:text-xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-12">
+                  My name is Wilfried, a Swellendam based Developer
               </h1>
               <div className="flex justify-center gap-3">
                 <Link to="/contact">
