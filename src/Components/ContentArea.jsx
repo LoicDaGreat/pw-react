@@ -3,8 +3,7 @@ import NavigationBar from "./NavigationBar";
 
 const ContentArea = ({ 
     children,
-    backgroundImg,
-    opacity
+    backgroundImg
 }) => {
 
     return (
