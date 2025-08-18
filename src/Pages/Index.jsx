@@ -9,12 +9,12 @@ import { CircleArrowRight, FolderGit2 } from 'lucide-react';
 const Index = () => {
 
   return (
-    <div>
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+    <div className="relative">
+      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <ParticlesComponent />
       <ContentArea backgroundImg={main}>
-        <div className="content-overlay flex flex-col items-center justify-center min-h-screen px-8 mt-2">
-          <div className="text-center max-w-3xl relative z-10">
+        <section className="content-overlay flex flex-col items-center justify-center min-h-screen px-8 mt-2">
+          <div className="text-center max-w-3xl relative z-20">
               <p className="text-blue-400 text-lg mb-8 font-medium">
                   Hi, welcome to my personal website.
               </p>
@@ -34,7 +34,7 @@ const Index = () => {
                 </Link>
               </div>
           </div>
-        </div>
+        </section>
         <PhoneWidget />
       </ContentArea>      
     </div>
