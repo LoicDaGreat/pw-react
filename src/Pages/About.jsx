@@ -68,7 +68,7 @@ const About = () => {
               }`}
               onClick={handleHoverFlip}
             >
-              <div className="absolute inset-0 bg-black flex items-center justify-center backface-hidden">
+              <div className="absolute inset-0 bg-slate-800 flex items-center justify-center backface-hidden">
                 <div className="text-center text-white">
                   <div className="flex-1 flex flex-col justify-center px-12 lg:px-20">
                     <div className="max-w-2xl">
