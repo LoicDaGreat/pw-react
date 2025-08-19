@@ -43,8 +43,22 @@ const Projects = () => {
     }
   ];
 
+  const getCardWidth = (cardId) => {
+    if (cardId === activeCard) {
+      return 'w-150';
+    }
+    return 'w-50'; 
+  };
+
+  const getCardOpacity = (cardId) => {
+    if (cardId === activeCard) {
+      return 'opacity-100';
+    }
+    return 'opacity-70 hover:opacity-90';
+  };
+
   return (
-    <div>
+   <div>
        <style jsx>{`
         @keyframes fade-in {
           from {
@@ -57,14 +71,54 @@ const Projects = () => {
           }
         }
         .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
+          animation: fade-in 0.8s ease-out forwards;
         }
       `}
       </style>
 
       <ContentArea>
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
-         
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center p-8">
+          <div className="flex space-x-2 h-96 rounded-2xl overflow-hidden shadow-2xl">
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                className={`
+                  relative cursor-pointer transition-all duration-800 ease-in-out rounded-xl overflow-hidden
+                  ${getCardWidth(project.id)} ${getCardOpacity(project.id)}
+                  transform hover:scale-90
+                `}
+                onClick={() => setActiveCard(project.id)}
+                style={{
+                  backgroundImage: `url(${project.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                
+                <div className="relative h-full flex flex-col justify-end p-6">
+                  {project.id === activeCard && (
+                    <div className="text-white opacity-0 animate-fade-in">
+                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                      <p className="text-sm opacity-90">
+                        {project.description}
+                      </p>
+                    </div>
+                  )}
+                  
+                  {project.id !== activeCard && (
+                    <div className="text-white transform rotate-90 origin-bottom-left absolute bottom-4 left-4">
+                      <span className="text-sm font-medium whitespace-nowrap">
+                        {project.title}
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            ))}
+          </div>
         </div>  
       </ContentArea>
     </div>
