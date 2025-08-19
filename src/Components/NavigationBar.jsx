@@ -25,16 +25,16 @@ const NavigationBar = () => {
         py-6 px-8
         md:px-32 bg-white drop-shadow-md bg-opacity-0">
           
-          <a href="#">
+          <Link to="/">
             <img src={loic4} alt="Wilfried Nkeng" className="w-52 hover:scale-110 transition-all"/>
-          </a> 
+          </Link> 
 
           <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110  rounded-md transition-all cursor-pointer"><span className="text-blue-600">01</span><br/><Link to="/">HOME</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">02</span><br/><Link to="/about">ABOUT</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">SKILLS</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">PROJECTS</Link></li>
-            <li className="p-3 hover:bg-sky-400 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">CONTACT</Link></li>
+            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">01</span><br/><Link to="/">HOME</Link></li>
+            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">02</span><br/><Link to="/about">ABOUT</Link></li>
+            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">SKILLS</Link></li>
+            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">PROJECTS</Link></li>
+            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">CONTACT</Link></li>
           </ul> 
 
           <div className="relative hidden md:flex items-center jutify-center gap-3">
