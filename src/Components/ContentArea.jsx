@@ -9,7 +9,7 @@ const ContentArea = ({
     return (
         <div className=" min-h-screen flex flex-col">
             <NavigationBar />
-            <main className="flex-1 w-full mx-auto sm:px-6 lg:px-8"
+            <main className="flex-1 w-full mx-auto"
                 style={{ backgroundImage: `url(${backgroundImg})` }}
             >
                 {children}
