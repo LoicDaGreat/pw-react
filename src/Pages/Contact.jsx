@@ -10,7 +10,7 @@ const Contact = () => {
     phone: ''
   });
 
-  const handleInputChange = (e) => {
+  const handleInput = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -51,7 +51,7 @@ const Contact = () => {
                         type="text"
                         name="name"
                         value={formData.name}
-                        onChange={handleInputChange}
+                        onChange={handleInput}
                         placeholder="John Smith"
                         className="w-full bg-transparent border-0 border-b-2 border-gray-600 text-white text-lg placeholder-gray-500 py-3 px-0 focus:outline-none focus:border-white transition-colors duration-200"
                       />
@@ -65,7 +65,7 @@ const Contact = () => {
                         type="email"
                         name="email"
                         value={formData.email}
-                        onChange={handleInputChange}
+                        onChange={handleInput}
                         placeholder="you@example.com"
                         className="w-full bg-transparent border-0 border-b-2 border-gray-600 text-white text-lg placeholder-gray-500 py-3 px-0 focus:outline-none focus:border-white transition-colors duration-200"
                       />
@@ -79,7 +79,7 @@ const Contact = () => {
                         type="tel"
                         name="phone"
                         value={formData.phone}
-                        onChange={handleInputChange}
+                        onChange={handleInput}
                         placeholder="+27 (XX) XXX XXXX"
                         className="w-full bg-transparent border-0 border-b-2 border-gray-600 text-white text-lg placeholder-gray-500 py-3 px-0 focus:outline-none focus:border-white transition-colors duration-200"
                       />
@@ -100,9 +100,8 @@ const Contact = () => {
           </div>
           
           <div className="w-1/2 bg-transparent flex">
-              <img src={Street} alt="Wilfried. Trusted Dev" className="w-full object-cover"/>
+            <img src={Street} alt="Wilfried. Trusted Dev" className="w-full object-cover"/>
           </div>
-
         </div>
       </ContentArea>
     </div>
