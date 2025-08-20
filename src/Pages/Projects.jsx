@@ -77,9 +77,9 @@ const Projects = () => {
       </style>
 
       <ContentArea>
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center p-8">
-          <div className="flex space-x-2 h-96 rounded-2xl overflow-hidden shadow-2xl">
-            {projects.map((project, index) => (
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+          <div className="flex space-x-2 h-[50rem] w-[50rem] bg-transparent overflow-hidden">
+            {projects.map((project) => (
               <div
                 key={project.id}
                 className={`
