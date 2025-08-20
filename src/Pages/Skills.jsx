@@ -46,7 +46,7 @@ const Skills = () => {
             <img src={bulb} alt="Tokyo backstreet requires skill to navigate" className="w-full h-auto object-cover"/>
           </div>
 
-          <div className="w-1/2 bg-slate-900 flex flex-col items-center justify-center gap-5">
+          <div className="w-1/2 bg-gray-900 flex flex-col items-center justify-center gap-5">
           {skills.map(skill => (
               <div key={skill.id} className="max-w-4xl w-30 mx-11 text-center text-white outline outline-slate-600 rounded-md hover:bg-blue-600 hover:text-white">
                 <div className="rounded-lg p-6 relative overflow-hidden">
