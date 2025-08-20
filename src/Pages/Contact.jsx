@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ContentArea from '../Components/ContentArea';
+import Street from '../assets/background/Street.jpg';
 
 const Contact = () => {
 
@@ -98,11 +99,10 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="w-1/2 bg-transparent flex items-center justify-center">
-            <div className="text-center text-white">
-              
-            </div>
+          <div className="w-1/2 bg-transparent flex">
+              <img src={Street} alt="Wilfried. Trusted Dev" className="w-full object-cover"/>
           </div>
+
         </div>
       </ContentArea>
     </div>
