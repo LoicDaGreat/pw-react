@@ -1,11 +1,25 @@
-import React from 'react'
-import NavigationBar from '../Components/NavigationBar'
+import React from 'react';
+import ContentArea from '../Components/ContentArea';
 
 const Contact = () => {
   return (
     <div>
-      <NavigationBar/>
-      Contact
+      <ContentArea>
+         <div className="flex h-screen">
+
+          <div className="w-1/2 bg-blue-500 flex items-center justify-center">
+            <div className="text-center text-white">
+
+            </div>
+          </div>
+          
+          <div className="w-1/2 bg-transparent flex items-center justify-center">
+            <div className="text-center text-white">
+              
+            </div>
+          </div>
+        </div>
+      </ContentArea>
     </div>
   )
 }
