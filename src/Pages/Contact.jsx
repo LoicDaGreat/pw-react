@@ -84,7 +84,7 @@ const Contact = () => {
   return (
     <div>
       <ContentArea>
-         <div className="flex h-screen">
+        <div className="flex h-screen">
 
           <div className="w-1/2  bg-gray-900 flex items-center justify-center">
             <div className="text-center text-white">

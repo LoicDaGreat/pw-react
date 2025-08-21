@@ -1,5 +1,5 @@
 import ContentArea from '../Components/ContentArea';
-import main from '../assets/background/main.jpg';
+import Wilfried2 from '../assets/background/Wilfried2.png';
 import ParticlesComponent from '../Components/ParticlesComponent';
 import PhoneWidget from '../Components/PhoneWidget';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ const Index = () => {
     <div className="relative">
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <ParticlesComponent />
-      <ContentArea backgroundImg={main}>
+      <ContentArea backgroundImg={Wilfried2}>
         <section className="content-overlay flex flex-col items-center justify-center min-h-screen px-8 mt-2">
           <div className="text-center max-w-3xl relative z-20">
               <p className="text-blue-400 text-lg mb-8 font-medium">

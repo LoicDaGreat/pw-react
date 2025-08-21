@@ -19,7 +19,7 @@ const NavigationBar = () => {
   }
 
   return (
-      <div className="w-full h-25 absolute z-20">
+      <div className="w-full h-28 absolute z-20">
         <nav className="flex justify-between items-center 
         text-white
         py-6 px-8
@@ -35,6 +35,7 @@ const NavigationBar = () => {
             <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">SKILLS</Link></li>
             <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">PROJECTS</Link></li>
             <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">CONTACT</Link></li>
+            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/projectDetails">DETAILS</Link></li>
           </ul> 
 
           <div className="relative hidden md:flex items-center jutify-center gap-3">

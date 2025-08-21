@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ContentArea from '../Components/ContentArea';
 import faspro24 from '../assets/projects/pf1/faspro24.png';
 import Showbay from '../assets/projects/pf2/Showbay.png';
@@ -59,7 +60,7 @@ const Projects = () => {
 
   return (
    <div>
-       <style jsx>{`
+       <style jsx="true">{`
         @keyframes fade-in {
           from {
             opacity: 0;
@@ -94,16 +95,18 @@ const Projects = () => {
                   backgroundPosition: 'center',
                 }}
               >
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 
                 <div className="relative h-full flex flex-col justify-end p-6">
                   {project.id === activeCard && (
+                   <Link to="/projectDetails"> 
                     <div className="text-white opacity-0 animate-fade-in">
-                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-sm opacity-90">
-                        {project.description}
-                      </p>
-                    </div>
+                        <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                        <p className="text-sm opacity-90">
+                          {project.description}
+                        </p>
+                      </div>
+                    </Link>
                   )}
                   
                   {project.id !== activeCard && (
