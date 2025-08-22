@@ -3,7 +3,6 @@ import Wilfried2 from '../assets/background/Wilfried2.png';
 import ParticlesComponent from '../Components/ParticlesComponent';
 import PhoneWidget from '../Components/PhoneWidget';
 import { Link } from 'react-router-dom';
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { CircleArrowRight, FolderGit2 } from 'lucide-react';
 
 const Index = () => {
@@ -11,7 +10,7 @@ const Index = () => {
   return (
     <div className="relative">
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-      <ParticlesComponent />
+      <ParticlesComponent config={"geo"}/>
       <ContentArea backgroundImg={Wilfried2}>
         <section className="content-overlay flex flex-col items-center justify-center min-h-screen px-8 mt-2">
           <div className="text-center max-w-3xl relative z-20">

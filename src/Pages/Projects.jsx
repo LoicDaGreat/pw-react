@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ContentArea from '../Components/ContentArea';
+import ParticlesComponent from '../Components/ParticlesComponent';
 import faspro24 from '../assets/projects/pf1/faspro24.png';
 import Showbay from '../assets/projects/pf2/Showbay.png';
 import Sinansel from '../assets/projects/pf3/Sinansel.png';
@@ -76,7 +77,7 @@ const Projects = () => {
         }
       `}
       </style>
-
+      <ParticlesComponent config={"amongUs"}/>
       <ContentArea>
         <div className="min-h-screen bg-gray-900 flex items-center justify-center">
           <div className="flex space-x-2 h-[50rem] w-[50rem] bg-transparent overflow-hidden">
