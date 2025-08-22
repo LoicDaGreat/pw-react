@@ -54,13 +54,19 @@ const About = () => {
         .rotate-y-180 {
           transform: rotateY(180deg);
         }
+        
+        @media (max-width: 767px) {
+          .mobile-scroll {
+            max-height: 70vh;
+            overflow-y: auto;
+          }
+        }
       `}</style>
 
       <div className="absolute inset-0 bg-black opacity-10"></div>
 
       <ContentArea backgroundImg={Forest}>
-        <div className="flex h-screen sm:flex-row md:flex-row inset-0">
-
+        <div className="hidden md:flex h-screen inset-0">
           <div className="w-1/2 perspective-1000 z-10">
             <div 
               className={`relative w-full h-full cursor-pointer transition-transform duration-700 transform-style-preserve-3d ${
@@ -94,11 +100,11 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="absolute inset-0 bg-stone-300 flex items-center justify-center backface-hidden rotate-y-180">
+              <div className="absolute inset-0 bg-stone-300 flex items-center justify-center backface-hidden rotate-y-180 pt-28">
                 <div className="text-center text-black">
                   <div className="max-w-4xl mx-28 space-y-8">
-                    {experiences.map(experience => (
-                      <div className="space-y-4">
+                    {experiences.map((experience, index) => (
+                      <div key={index} className="space-y-4">
                         <div className="inline-block bg-blue-600 px-3 py-1 text-sm font-medium rounded">
                             {experience.date}
                         </div>
@@ -113,12 +119,58 @@ const About = () => {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
           
           <div className="w-1/2 bg-transparent flex">
             <img src={Wilfried1} alt="Wilfried Nkeng" className="w-full h-auto object-cover"/>
+          </div>
+        </div>
+
+        <div className="md:hidden min-h-screen flex flex-col">
+          <div className="relative h-64 sm:h-80 flex-shrink-0">
+            <img 
+              src={Wilfried1} 
+              alt="Wilfried Nkeng" 
+              className="w-full h-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
+          </div>
+
+          <div className="flex-1 bg-gray-900 px-6 py-8">
+            <div className="max-w-md mx-auto">
+              <div className="mb-6">
+                <span className="text-white text-xs font-semibold tracking-widest uppercase">
+                  HI THERE!
+                </span>
+              </div>
+              
+              <p className="text-white font-light leading-relaxed mb-8 text-sm">
+                I am an application software developer based Centurion and originally from Cameroon, 
+                with a strong focus in Back-End development. 
+                I love to get new experiences and always learn from my surroundings. 
+                I've done more than 10 projects. 
+                I look forward to any opportunities and challenges.
+              </p>
+
+              <div className="bg-stone-200 rounded-lg p-4 mobile-scroll">
+                <div className="space-y-6">
+                  {experiences.map((experience, index) => (
+                    <div key={index} className="border-b border-gray-300 pb-4 last:border-b-0">
+                      <div className="inline-block bg-blue-600 text-white px-2 py-1 text-xs font-medium rounded mb-2">
+                        {experience.date}
+                      </div>
+                      <h3 className="text-base font-bold text-black mb-2">
+                        {experience.title}
+                      </h3>
+                      <p className="text-sm text-gray-800 leading-relaxed">
+                        {experience.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ContentArea>

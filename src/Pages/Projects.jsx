@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ContentArea from '../Components/ContentArea';
+import ParticlesComponent from '../Components/ParticlesComponent';
 import faspro24 from '../assets/projects/pf1/faspro24.png';
 import Showbay from '../assets/projects/pf2/Showbay.png';
 import Sinansel from '../assets/projects/pf3/Sinansel.png';
@@ -46,16 +47,23 @@ const Projects = () => {
 
   const getCardWidth = (cardId) => {
     if (cardId === activeCard) {
-      return 'w-150';
+      return 'w-150 md:w-150 sm:w-full';
     }
-    return 'w-50'; 
+    return 'w-50 md:w-50 sm:w-full'; 
   };
 
   const getCardOpacity = (cardId) => {
     if (cardId === activeCard) {
       return 'opacity-100';
     }
-    return 'opacity-70 hover:opacity-90';
+    return 'opacity-100 hover:opacity-90';
+  };
+
+  const getCardHeight = (cardId) => {
+    if (cardId === activeCard) {
+      return 'h-64 sm:h-48';
+    }
+    return 'h-64 sm:h-32';
   };
 
   return (
@@ -74,12 +82,21 @@ const Projects = () => {
         .animate-fade-in {
           animation: fade-in 0.8s ease-out forwards;
         }
+        
+        @media (min-width: 768px) {
+          .w-150 { width: 37.5rem; }
+          .w-50 { width: 12.5rem; }
+        }
+        
+        @media (max-width: 767px) {
+          .w-150, .w-50 { width: 100%; }
+        }
       `}
       </style>
-
+      <ParticlesComponent config={"amongUs"}/>
       <ContentArea>
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-          <div className="flex space-x-2 h-[50rem] w-[50rem] bg-transparent overflow-hidden">
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-8">
+          <div className="hidden md:flex space-x-2 h-[40rem] w-full max-w-[50rem] bg-transparent overflow-hidden">
             {projects.map((project) => (
               <div
                 key={project.id}
@@ -99,7 +116,7 @@ const Projects = () => {
                 
                 <div className="relative h-full flex flex-col justify-end p-6">
                   {project.id === activeCard && (
-                   <Link to="/projectDetails"> 
+                   <Link to={`/projectDetails/${activeCard}`}> 
                     <div className="text-white opacity-0 animate-fade-in">
                         <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                         <p className="text-sm opacity-90">
@@ -121,6 +138,49 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
+          </div>
+          
+          <div className="pt-16">
+            <div className="md:hidden w-full max-w-sm space-y-4">
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className={`
+                    relative cursor-pointer transition-all duration-500 ease-in-out rounded-xl overflow-hidden
+                    ${getCardHeight(project.id)} ${getCardOpacity(project.id)}
+                    transform active:scale-95
+                  `}
+                  onClick={() => setActiveCard(project.id)}
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  
+                  <div className="relative h-full flex flex-col justify-end p-4">
+                    {project.id === activeCard && (
+                      <Link to={`/projectDetails/${activeCard}`}> 
+                        <div className="text-white opacity-0 animate-fade-in">
+                          <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                          <p className="text-sm opacity-90 line-clamp-3">
+                            {project.description}
+                          </p>
+                        </div>
+                      </Link>
+                    )}
+                    
+                    {project.id !== activeCard && (
+                      <div className="text-white">
+                        <h4 className="text-lg font-semibold">{project.title}</h4>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/200 to-transparent"></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>  
       </ContentArea>

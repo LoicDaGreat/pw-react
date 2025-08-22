@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import { useState, useEffect } from 'react';
 import ParticlesConfig from '../particles.config';
+import ParticlesConfig2 from '../particles2.config';
 
-const ParticlesComponent = () => {
+const ParticlesComponent = ({config}) => {
    const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -15,10 +15,21 @@ const ParticlesComponent = () => {
     });
   }, []);
 
+  const particleConfigurations = {
+  "geo": ParticlesConfig,
+  "amongUs": ParticlesConfig2
+  };
+
+  const particles = particleConfigurations[config];
+ 
+  if (!init) {
+    return null;
+  }
+
   return (
     <Particles 
         id="tsparticles"
-        options={ParticlesConfig}
+        options={particles}
     >
 
     </Particles>
