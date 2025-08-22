@@ -177,7 +177,7 @@ const Projects = () => {
                     )}
                   </div>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/200 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/100 to-transparent"></div>
                 </div>
               ))}
             </div>

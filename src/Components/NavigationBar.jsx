@@ -7,6 +7,7 @@ import { FileDown, Menu, X } from 'lucide-react';
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPageOpen, setIsPageOpen] = useState(false);
 
   const handleDownload = () => {
     const filePath = '/files/LoicCV.pdf';
@@ -52,7 +53,7 @@ const NavigationBar = () => {
           >
            { isMenuOpen ? <X size={40} /> : <Menu size={40}/>}
           </i>
-          <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
+          <div className={`absolute inset-0 lg:hidden top-24 left-0 w-full  bg-transparent backdrop-blur flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
             style={{transition: "transform 0.4s ease, opacity 0.4s ease"}}
           >
               <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer">Home</li>
