@@ -160,7 +160,7 @@ const ProjectDetails = () => {
         </div>
 
         <div className="md:hidden min-h-screen">
-          <div className="relative h-48 bg-transparent flex justify-center items-center">
+          <div className="relative h-48 bg-transparent flex justify-center items-center pt-10">
             <div className="absolute inset-0 bg-black/40"></div>
             <h1 className="relative text-3xl sm:text-4xl font-bold text-white leading-tight tracking-wide text-center px-4">
               SHOWBAY 24
