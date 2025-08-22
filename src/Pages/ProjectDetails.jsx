@@ -57,7 +57,7 @@ const ProjectDetails = () => {
             <div className="grid grid-cols-1 gap-12 lg:gap-24 mx-12">
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-white text-2xl font-semibold mb-4 pt-4">Objective</h2>
+                  <h2 className="text-white text-2xl font-semibold mb-4 pt-1">Objective</h2>
                   <p className="text-gray-300 text-lg leading-relaxed">
                     Hybrid Virtual and in-person events platform
                   </p>
