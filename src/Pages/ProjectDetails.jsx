@@ -11,7 +11,7 @@ const ProjectDetails = () => {
     <div>
       <ContentArea backgroundImg={bulb2}>
         <div className="hidden lg:flex h-screen flex-col">
-          <div className="h-1/2 bg-transparent flex justify-center items-center pt-8">
+          <div className="h-1/2 bg-transparent flex justify-center items-center pt-14">
             <div className="mb-16 flex">
               <h1 className="text-9xl lg:text-9xl font-bold text-white leading-none tracking-widest">
                 SHOWBAY 24
