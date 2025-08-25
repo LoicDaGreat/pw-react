@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/pw-react/static/css/main.67f68787.css",
+    "main.js": "/pw-react/static/js/main.8dc6d9af.js",
+    "static/js/453.235377ce.chunk.js": "/pw-react/static/js/453.235377ce.chunk.js",
+    "static/media/Wilfried1.png": "/pw-react/static/media/Wilfried1.4556b56c5b74cf3e3c14.png",
+    "static/media/Wilfried2.png": "/pw-react/static/media/Wilfried2.0a85aa8e7b1f625d97de.png",
+    "static/media/Forest.jpg": "/pw-react/static/media/Forest.7c1928f308a72330d797.jpg",
+    "static/media/PropertyTV.png": "/pw-react/static/media/PropertyTV.7c242e8a0dcc3e79ac15.png",
+    "static/media/Showbay5.png": "/pw-react/static/media/Showbay5.17924f96cdcf0c4aa425.png",
+    "static/media/Kleekle.png": "/pw-react/static/media/Kleekle.7981736fe5068876743a.png",
+    "static/media/faspro24.png": "/pw-react/static/media/faspro24.309de115e3e46a0a6341.png",
+    "static/media/Street.jpg": "/pw-react/static/media/Street.9e8328074f484bb521f2.jpg",
+    "static/media/Sinansel.png": "/pw-react/static/media/Sinansel.0143ae6db5bb1da7851a.png",
+    "static/media/bulb2.jpg": "/pw-react/static/media/bulb2.328e1a8c8b691c79b215.jpg",
+    "static/media/Showbay.png": "/pw-react/static/media/Showbay.d5f49f9ec513b1b1c37b.png",
+    "static/media/bulb.jpg": "/pw-react/static/media/bulb.609d64c48b85ab38fb11.jpg",
+    "static/media/loic4.png": "/pw-react/static/media/loic4.f9bb7e0931233158fa45.png",
+    "index.html": "/pw-react/index.html",
+    "main.67f68787.css.map": "/pw-react/static/css/main.67f68787.css.map",
+    "main.8dc6d9af.js.map": "/pw-react/static/js/main.8dc6d9af.js.map",
+    "453.235377ce.chunk.js.map": "/pw-react/static/js/453.235377ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67f68787.css",
+    "static/js/main.8dc6d9af.js"
+  ]
+}

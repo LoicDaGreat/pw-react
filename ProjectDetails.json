@@ -1,0 +1,77 @@
+{
+    "1":{
+        "name": "FASPRO 24",
+        "date": "March 2022",
+        "client": "TNG Solutions",
+        "url": "",
+        "role": "Laravel and Ionic Dev(FullStack Dev)",
+        "objective": "Create a Facility Management App",
+        "stack": "Laravel -> Ionic -> MySQL",
+        "colors": [
+            "#008B0F",
+            "#FFFFFF",
+            "#000000"
+        ],
+        "gallery": ""
+    },
+    "2":{
+        "name": "SHOWBAY 24",
+        "date": "March 2022",
+        "client": "TNG Solutions",
+        "url": "www.showbay24.com",
+        "role": "React and Node.js Dev(FullStack Dev)",
+        "objective": "Hybrid Virtual and in-person events platform",
+        "stack": "React -> Node.js -> MongoDB",
+        "colors": [
+            "#15A27A",
+            "#0F86A3",
+            "#FFFFFF"
+        ],
+        "gallery": ""
+    },
+    "3":{
+        "name": "SINANSEL",
+        "date": "August 2019",
+        "client": "Sinansel Tisa Consulting",
+        "url": "www.sinansel.com",
+        "role": "HTML, CSS and PHP Junior Dev(FullStack Dev)",
+        "objective": "Create a Marketplace Platform for use in Cameroun and South Africa",
+        "stack": "HTML5 -> Bootstrap -> MongoDB -> PHP",
+        "colors": [
+            "#FFFFFF",
+            "#D42729",
+            "#478DCB"
+        ],
+        "gallery": ""
+    },
+    "4":{
+        "name": "PropertyTV",
+        "date": "August 2021",
+        "client": "Moody and Smith Digital",
+        "url": "www.kleekle.co.za",
+        "role": "Laravel Junior Dev(FullStack Dev)",
+        "objective": "The goal was to create a broadcasting platform for users to suscribe and gain access to educational property content as well as video listings",
+        "stack": "Laravel -> MySQL",
+        "colors": [
+            "#3FF280",
+            "#000000",
+            "#FF0000"
+        ],
+        "gallery": ""
+    },
+    "5":{
+        "name": "Kleekle",
+        "date": "Jan 2021",
+        "client": "Moody and Smith Digital",
+        "url": "www.kleekle.co.za",
+        "role": "Junior Web Developer",
+        "objective": "Creating a photography platform where property agents can request for photography services. A 2nd site was conceptualized in order to act a freelance platform for photographers outside of Moody and Smith",
+        "stack": "HTML5 -> Bootstrap -> MongoDB -> PHP",
+        "colors": [
+            "#2C3383",
+            "#FFFFFF",
+            "#F37277"
+        ],
+        "gallery": ""
+    }
+}
