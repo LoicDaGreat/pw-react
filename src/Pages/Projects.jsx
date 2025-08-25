@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ContentArea from '../Components/ContentArea';
 import ParticlesComponent from '../Components/ParticlesComponent';
+import PhoneWidget from '../Components/PhoneWidget';
 import faspro24 from '../assets/projects/pf1/faspro24.png';
 import Showbay from '../assets/projects/pf2/Showbay.png';
 import Sinansel from '../assets/projects/pf3/Sinansel.png';
@@ -139,7 +140,8 @@ const Projects = () => {
               </div>
             ))}
           </div>
-          
+          <PhoneWidget />
+
           <div className="pt-16">
             <div className="md:hidden w-full max-w-sm space-y-4">
               {projects.map((project) => (
