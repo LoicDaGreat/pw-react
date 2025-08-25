@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavigationBar from "./NavigationBar";
 
 const ContentArea = ({ 
@@ -6,9 +6,15 @@ const ContentArea = ({
     backgroundImg
 }) => {
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const menuState = (state) => {
+        setIsMenuOpen(state);
+    }
+
     return (
         <div className=" min-h-screen flex flex-col">
-            <NavigationBar />
+            <NavigationBar onStateChange={menuState}/>
             <main className="flex-1 w-full mx-auto bg-no-repeat bg-cover bg-fixed"
                 style={{ backgroundImage: `url(${backgroundImg})` }}
             >

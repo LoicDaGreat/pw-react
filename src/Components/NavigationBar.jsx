@@ -11,14 +11,35 @@ const NavigationBar = () => {
 
   const menuItems = [
     { 
-      id: '/home', 
-      label: 'HOME' 
+      id: 1, 
+      label: 'HOME',
+      url: '/'
     },
-    { id: 'about', label: 'ABOUT' },
-    { id: 'services', label: 'SKILLS' },
-    { id: 'contact', label: 'CONTACT' },
-    { id: 'contact', label: 'PROJECTS' },
-    { id: 'contact', label: 'DETAILS' }
+    { 
+      id: 2, 
+      label: 'ABOUT', 
+      url: '/about'
+    },
+    { 
+      id: 3, 
+      label: 'SKILLS', 
+      url: '/skills'
+    },
+    { 
+      id: 4, 
+      label: 'CONTACT', 
+      url: '/contact'
+    },
+    { 
+      id: 5, 
+      label: 'PROJECTS', 
+      url: '/projects'
+    },
+    { 
+      id: 6, 
+      label: 'DETAILS', 
+      url: '/projectDetails/:id'
+    }
   ];
 
   const handleDownload = () => {
@@ -43,12 +64,13 @@ const NavigationBar = () => {
           </Link> 
 
           <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">01</span><br/><Link to="/">HOME</Link></li>
-            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">02</span><br/><Link to="/about">ABOUT</Link></li>
-            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">03</span><br/><Link to="/skills">SKILLS</Link></li>
-            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">04</span><br/><Link to="/projects">PROJECTS</Link></li>
-            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">05</span><br/><Link to="/contact">CONTACT</Link></li>
-            <li className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">06</span><br/><Link to="/projectDetails/:id">DETAILS</Link></li>
+            {menuItems.map( item => (
+              <Link to={item.url}>
+                <li 
+                  key={item.id}
+                  className="p-3 hover:bg-blue-600 hover:text-white hover:scale-110 rounded-md transition-all cursor-pointer"><span className="text-blue-600">0{item.id}</span><br/>{item.label}</li>
+              </Link>
+            ))}
           </ul> 
 
           <div className="relative hidden md:flex items-center jutify-center gap-3">
@@ -68,14 +90,12 @@ const NavigationBar = () => {
           <div className={`min-h-screen absolute lg:hidden top-24 left-0 w-full flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
             style={{transition: "transform 0.4s ease, opacity 0.4s ease"}}
           >
-            <div class="absolute inset-0 backdrop-filter backdrop-blur-lg bg-black bg-opacity-50"></div>
+            <div className="absolute inset-0 backdrop-filter blur-3xl bg-black bg-opacity-100"></div>
               <div className="z-50 inset-0">
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer"><Link to="/">Home</Link></li>
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer"><Link to="/about">About</Link></li>
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer"><Link to="/skills">Skills</Link></li>
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer"><Link to="/projects">Project</Link></li>
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer"><Link to="/contact">Contact</Link></li>
-              </div>
+                {menuItems.map( item => (
+                  <Link to={item.url}><li className="list-none w-full text-center p-4 hover:bg-blue-600 hover:text-white transition-all cursor-pointer">{item.label}</li></Link>
+                ))}
+                </div>
           </div>
         </nav>
       </div>
