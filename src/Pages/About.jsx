@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ContentArea from '../Components/ContentArea';
 import SocialMediaWidget from '../Components/SocialMediaWidget';
+import PhoneWidget from '../Components/PhoneWidget';
 import Forest from '../assets/background/Forest.jpg';
 import Wilfried1 from '../assets/background/Wilfried1.png';
 import { Smile } from 'lucide-react';
@@ -120,11 +121,13 @@ const About = () => {
                 </div>
               </div>
             </div>
+            <SocialMediaWidget/>
           </div>
           
           <div className="w-1/2 bg-transparent flex">
             <img src={Wilfried1} alt="Wilfried Nkeng" className="w-full h-auto object-cover"/>
           </div>
+          <PhoneWidget />
         </div>
 
         <div className="md:hidden min-h-screen flex flex-col">

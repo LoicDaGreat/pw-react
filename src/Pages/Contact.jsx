@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import ContentArea from '../Components/ContentArea';
+import SocialMediaWidget from '../Components/SocialMediaWidget';
+import PhoneWidget from '../Components/PhoneWidget';
 import Street from '../assets/background/Street.jpg';
 
 const Contact = () => {
@@ -174,10 +176,12 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            <SocialMediaWidget />
           </div>
           
           <div className="w-1/2 bg-transparent flex">
             <img src={Street} alt="Wilfried. Trusted Dev" className="w-full object-cover"/>
+            <PhoneWidget />
           </div>
         </div>
       </ContentArea>
